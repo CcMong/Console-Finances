@@ -95,6 +95,17 @@ var monthCount = finances.length;
 
 console.log("Total Duration of Analysis Period: " + monthCount + " months");
 
+// 2. To calculate the total profits/losses in the period of analysis:
+
+var totalProfit = 0
+
+for (var i = 0; i < finances.length; i++) {
+    //console.log(finances[i][1]);
+    totalProfit += finances[i][1]; // totalProfit = totalProfit + finances [i][1]
+}
+
+console.log("Total Profits/Losses over Analysis Period: $" + totalProfit);
+
 
 
 
