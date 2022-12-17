@@ -106,6 +106,34 @@ for (var i = 0; i < finances.length; i++) {
 
 console.log("Total Profits/Losses over Analysis Period: $" + totalProfit);
 
+// 3. To calculate the average of changes in the profits/losses over the entire period:
+
+// Assuming the company began in December 2009:
+
+// Declare a variable totProfitChange, with an initial value corresponding to the first month's profit (as we assume that the company started the month before when profit was 0.)
+
+var totProfitChange = finances[0][1];
+
+for (var i = 1; i < finances.length; i++) {
+
+    // Within the loop, we will be adding the old profit change to the difference between monthly profits to get the new profit change value.
+
+    totProfitChange = totProfitChange + finances[i][1] - finances[i-1][1];
+
+    // console.log(totProfitChange);
+    
+}
+
+// console.log(totProfitChange); // 671,099
+
+var aveProfitChange = totProfitChange / finances.length;
+
+console.log("Average Month-on-Month Change in Profits: $" + aveProfitChange.toFixed(2));
+
+/* Another way of solving this question is by logical thought: Since we assumed that the first profit entry also equals the profit change for that month, we will always get the same thing happen for every subsequent line as we cumulatively add up the CHANGES in the profits/losses over the period time. 
+
+Therefore, one could simply conclude that the value of the profits at the very last entry (index 85) is the total of the CHANGES in profit over the period. We simply divide this number by the number of months to get the average. */
+
 
 
 
