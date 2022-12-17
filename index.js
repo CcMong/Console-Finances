@@ -134,6 +134,32 @@ console.log("Average Month-on-Month Change in Profits: $" + aveProfitChange.toFi
 
 Therefore, one could simply conclude that the value of the profits at the very last entry (index 85) is the total of the CHANGES in profit over the period. We simply divide this number by the number of months to get the average. */
 
+// 4. To calculate the greatest increase in profits over the period of time:
+
+// We begin with the first profit change initially. If the next change is higher than this initial value, then it becomes the new maximum profit change. This will then run through the loop over the entire array.
+
+var maxProfitChange = finances[0][1];
+var maxProfitMonth = finances[0][0];
+
+for(var i = 1; i < finances.length; i++) {
+
+    if ((finances[i][1] - finances[i-1][1]) > maxProfitChange) {
+
+        maxProfitChange = finances[i][1] - finances[i-1][1];
+
+        maxProfitMonth = finances[i][0];
+
+         //console.log(maxProfitMonth, maxProfitChange);
+    }
+    //console.log(maxProfitMonth, maxProfitChange);
+}
+
+console.log("Best Performing Month, with highest change in profits: " + maxProfitMonth + ", " + maxProfitChange);
+
+
+
+
+
 
 
 
