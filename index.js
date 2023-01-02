@@ -110,22 +110,20 @@ document.write("Total Profits/Losses over Analysis Period: $" + totalProfit + "<
 
 // 3. To calculate the average of changes in the profits/losses over the entire period:
 
-/* I will first define an initial condition, which is the first profit change between the first 2 months, and then I will loop through the rest of the array to sum up all the profit changes. Then I will find the average over all months where there was a profit change (ie. all except the first month).*/
+/* First define an initial condition, the profit change between the first 2 months, and then loop through the rest of the array to sum up all the profit changes. Then find the average over all months in which a profit change occurs (ie. all except the first month).*/
 
 // Declare a variable totProfitChange, with an initial value corresponding to index 1 profit - index 0 profit:
 
 var totProfitChange = finances [1][1] - finances[0][1];
 
-// Then I will start the loop iteration from i = 2, to continue to sum the profit changes through the array:
+// Start the loop iteration from i = 2 to continue to sum the profit changes through the array:
 
 for (var i = 2; i < finances.length; i++) {
 
-    // Within the loop, we will keep adding the difference between monthly profits to the old total profit change value to continually result in the new total profit change value:
+    // Within the loop, keep adding the difference between monthly profits to the old total profit change value to continually result in the new total profit change value:
 
     totProfitChange += finances[i][1] - finances[i-1][1];       
 }
-
-// console.log(totProfitChange); // -196785
 
 // Average profit change will now be totProfitChange divided by the total number of months MINUS 1 to account for the number of change periods between months:
 
@@ -136,7 +134,7 @@ document.write("Average Month-on-Month Change in Profits: $" + aveProfitChange.t
 
 // 4. To calculate the greatest increase in profits over the period of time:
 
-/*We begin with the first profit change initially, which is index 1 profit minus index 0 profit. 
+/*Initial condition is the first profit change, which is index 1 profit minus index 0 profit. 
 If any subsequent profit change value is higher than this initial value, then it becomes the new maximum profit change. This will then run through the loop over the entire array.*/
 
 var maxProfitChange = finances[1][1] - finances[0][1];
@@ -146,7 +144,7 @@ var maxProfitMonth = finances[1][0]; // the month we calculate the first profit 
 
 for(var i = 2; i < finances.length; i++) { 
 
-    if ((finances[i][1] - finances[i-1][1]) > maxProfitChange) { // if ()
+    if ((finances[i][1] - finances[i-1][1]) > maxProfitChange) { 
 
         maxProfitChange = finances[i][1] - finances[i-1][1];
 
@@ -159,7 +157,7 @@ document.write("Best Performing Month, with greatest positive change in profits:
 
 // 5. To calculate the greatest decrease in profits over the period of time:
 
-// As in 4, we begin with the first profit change initially. If the next change is lower thank this inital value, then it becomes the new minimum profit change. This will then run through the loop over the entire array.
+// As in 4, we begin with the first profit change initially. If the next change is lower than this initial value, then it becomes the new minimum profit change. This will then run through the loop over the entire array.
 
 var minProfitChange = finances[1][1] - finances[0][1];
 var minProfitMonth = finances[1][0];
