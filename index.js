@@ -94,7 +94,7 @@ console.log("Financial Analysis for Newbie2JS Corp.");
 var monthCount = finances.length;
 
 console.log("Total Duration of Analysis Period: " + monthCount + " months");
-document.write("Total Duration of Analysis Period: " + monthCount + " months" + "<br> <br>");
+document.write("Total Duration of Analysis Period: " + "<br> <br>" + monthCount + " months" + "<br> <br>");
 
 // 2. To calculate the total profits/losses in the period of analysis:
 
@@ -106,7 +106,7 @@ for (var i = 0; i < finances.length; i++) {
 }
 
 console.log("Total Profits/Losses over Analysis Period: $" + totalProfit);
-document.write("Total Profits/Losses over Analysis Period: $" + totalProfit + "<br><br>");
+document.write("Total Profits/Losses over Analysis Period:" + "<br> <br>" + "$" + totalProfit + "<br><br>");
 
 // 3. To calculate the average of changes in the profits/losses over the entire period:
 
@@ -130,7 +130,7 @@ for (var i = 2; i < finances.length; i++) {
 var aveProfitChange = totProfitChange / (finances.length - 1);
 
 console.log("Average Month-on-Month Change in Profits: $" + aveProfitChange.toFixed(2));
-document.write("Average Month-on-Month Change in Profits: $" + aveProfitChange.toFixed(2) + "<br><br>");
+document.write("Average Month-on-Month Change in Profits:" + "<br> <br>" + "$" + aveProfitChange.toFixed(2) + "<br><br>");
 
 // 4. To calculate the greatest increase in profits over the period of time:
 
@@ -153,7 +153,7 @@ for(var i = 2; i < finances.length; i++) {
 }
 
 console.log("Best Performing Month, with greatest positive change in profits: " + maxProfitMonth + ", $" + maxProfitChange);
-document.write("Best Performing Month, with greatest positive change in profits: " + maxProfitMonth + ", $" + maxProfitChange + "<br><br>");
+document.write("Best Performing Month, with greatest positive change in profits:" + "<br> <br>" + maxProfitMonth + ", $" + maxProfitChange + "<br><br>");
 
 // 5. To calculate the greatest decrease in profits over the period of time:
 
@@ -174,7 +174,7 @@ for (var i = 2; i < finances.length; i++) {
 }
 
 console.log("Worst Performing Month, with greatest negative change in profits: " + minProfitMonth + ", $" + minProfitChange);
-document.write("Worst Performing Month, with greatest negative change in profits: " + minProfitMonth + ", $" + minProfitChange + "<br><br>");
+document.write("Worst Performing Month, with greatest negative change in profits:" + "<br> <br>" + minProfitMonth + ", $" + minProfitChange + "<br><br>");
 
 
 
