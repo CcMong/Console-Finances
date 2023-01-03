@@ -30,7 +30,7 @@ Simply upload the index.html, index.js and license.txt files, along with the ass
 
 The final code prints the analysis to the console, as well as displaying the summarised analysis on the webpage.
 
-[Link to the deployed Financial Analysis Summary website on GitHub Pages](xxx)
+[Link to the deployed Financial Analysis Summary website on GitHub Pages](https://ccmong.github.io/Console-Finances/)
 
 [Link to the GitHub code repository](https://github.com/CcMong/Console-Finances)
 
@@ -49,6 +49,10 @@ MIT License.
 Please refer to the LICENSE in the repo.
 
 ## Badges
+
+![MIT License](https://img.shields.io/github/license/CcMong/console-finances)  
+
+![GitHub issues](https://img.shields.io/github/issues-raw/CcMong/console-finances)
 
 
 
